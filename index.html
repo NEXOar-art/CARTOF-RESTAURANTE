@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#171714">
+  <meta name="description" content="Cartof Restaurant · cocina de autor y fusión en Córdoba. Reservas y pedidos por WhatsApp.">
+  <title>Cartof · Cocina de autor en Córdoba</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="vendor/three.min.js"></script>
+  <script defer src="catalog.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="Cartof, inicio"><span class="brand-mark">C</span><span>CARTOF<small>RESTAURANT · CÓRDOBA</small></span></a>
+    <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false"><i></i><i></i></button>
+    <nav class="nav-links" aria-label="Navegación principal">
+      <a href="#experiencia">La experiencia</a><a href="#carta">La carta</a><a href="#galeria">Galería</a><a href="#reservas">Reservas</a>
+      <button class="cart-open" type="button">Pedido <span class="cart-count">0</span></button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-label="Cartof Restaurant">
+      <div class="hero-photo" role="img" aria-label="Interior de Cartof, foto de la ficha de Google Maps"></div>
+      <canvas id="hero-canvas" aria-hidden="true"></canvas>
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="eyebrow reveal">COCINA DE AUTOR · CÓRDOBA, ARGENTINA</p>
+        <h1 class="kinetic-title">Una mesa.<br><em>Mil mundos.</em></h1>
+        <p class="hero-copy reveal">Sabores que viajan, ingredientes que sorprenden y una experiencia para compartir.</p>
+        <div class="hero-actions reveal"><a class="button button-light" href="#carta">Explorar la carta <span>↘</span></a><a class="text-link" href="#reservas">Reservá tu mesa <span>↗</span></a></div>
+      </div>
+      <div class="hero-bottom"><span>AV. CARLOS F. GAUSS 5939 · CÓRDOBA</span><a href="#experiencia">DESLIZÁ PARA DESCUBRIR <b>↓</b></a><span>DESDE 2019</span></div>
+      <div class="hero-index">01 <span>/</span> 04</div>
+    </section>
+
+    <section class="intro section-pad" id="experiencia">
+      <div class="section-kicker reveal"><span>01 — NUESTRA ESENCIA</span><span>COCINA FUSIÓN · PLATOS PARA COMPARTIR</span></div>
+      <div class="intro-grid">
+        <h2 class="kinetic-title reveal">La cocina<br>como <em>viaje.</em></h2>
+        <div class="intro-text reveal"><p class="lead">En Cartof, cada plato es una invitación a descubrir.</p><p>Una cocina de autor que cruza culturas, técnicas y productos de estación. Pequeños bocados, grandes historias y una mesa que se disfruta mejor en compañía.</p><a class="under-link" href="#carta">Conocé nuestra propuesta <span>↘</span></a></div>
+      </div>
+      <div class="stat-row reveal"><div><strong>01</strong><span>cocina de autor</span></div><div><strong>∞</strong><span>sabores por descubrir</span></div><div><strong>20–70k</strong><span>ARS por persona · rango informado</span></div></div>
+    </section>
+
+    <section class="menu-section section-pad" id="carta">
+      <div class="section-kicker light-kicker reveal"><span>02 — LA CARTA</span><span>UNA EXPLORACIÓN DE SABORES</span></div>
+      <div class="menu-heading"><h2 class="kinetic-title reveal">Elegí tu<br><em>próximo favorito.</em></h2><p class="reveal">Platos de autor y bocados para compartir.<br>Los precios se confirman al realizar el pedido.</p></div>
+      <div class="menu-tools"><label class="menu-search"><span>BUSCAR EN LA CARTA</span><input id="menu-search" type="search" placeholder="Plato, ingrediente, frase…" autocomplete="off"></label><label class="menu-select-label"><span>COLECCIÓN</span><select id="menu-select"><option value="todos">Todas las cartas</option></select></label><button class="admin-open" type="button">Administrar precios <span>↗</span></button></div>
+      <div class="menu-filters" id="menu-filters" role="group" aria-label="Filtrar por categoría"></div>
+      <p class="result-count" id="result-count" aria-live="polite"></p>
+      <div class="menu-grid" id="menu-grid"></div>
+      <p class="menu-note">Carta transcripta de las capturas compartidas. Los precios se mantienen tal como aparecen en cada carta; confirmá vigencia y disponibilidad por WhatsApp.</p>
+    </section>
+
+    <section class="quote-band"><div class="quote-overlay"></div><blockquote class="kinetic-title">“Comer también<br>es <em>descubrir.”</em></blockquote><span class="quote-caption">CARTOF · COCINA QUE SORPRENDE</span></section>
+
+    <section class="gallery-section section-pad" id="galeria">
+      <div class="section-kicker reveal"><span>03 — GALERÍA</span><span>UN ANTICIPO DE LA EXPERIENCIA</span></div>
+      <div class="gallery-heading"><h2 class="kinetic-title reveal">Platos con<br><em>personalidad.</em></h2><p class="reveal">Cada detalle cuenta.<br>Deslizá y conocé Cartof.</p></div>
+      <div class="gallery-grid">
+        <figure class="gallery-item gallery-large reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9TCdTCoBSrP93f7Q1o2vUYUS6IO8R5tLg12BpkuEkPZRNb_5bKBZW0j5sy19qHfNRElO1TdUhbka-LWoVTa4stMaxo4_E2_c83JTV900ClvCX945O8Apd5-kScb572MdfMo4cw=w1400-h1000-k-no" alt="Salón de Cartof con mesas y cocina a la vista, foto de Google Maps" loading="lazy"><figcaption>01 <span>El salón</span></figcaption></figure>
+        <figure class="gallery-item reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9SBXxg-t-Vaay-4bk8DtFdyp2rLtkZe_9dZVem1nz1syXoR8nBsfzoUrfERsBGtuGcd_6NAGyrah5JNcAOaSDvwaUW4Q34ED36fu5hxS-N_-s8ClxYdPkuXcnu3OegfYoCLQEH5=w1200-h1500-k-no" alt="Plato de Cartof, foto publicada en la ficha de Google Maps" loading="lazy"><figcaption>02 <span>Cocina de autor</span></figcaption></figure>
+        <figure class="gallery-item reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9STiWVrp2zd11otu-CalmOGldeIKFUbtNR4D1ktysAVNxaARx_CspsTXjl5vGA6t2_pmoWpOpz5hmyacyqNMZZMTpEf7UP4Fha47cOF-Ke7igXYVVTq2LJATmLTmGYqGiqV182qMw=w1200-h1600-k-no" alt="Risotto de pulpo de Cartof, foto de Google Maps" loading="lazy"><figcaption>03 <span>Risotto de pulpo</span></figcaption></figure>
+        <figure class="gallery-item reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9SoXv0cV1OWgx9kbFUpIKPssLvfUGa-wznEBRrpcgkmTBcb1MwTJIScEZO7UCLQkKMDd3oDiM3OBflDvuOz3pRFBSPQ8AYVOzFVAoRVPGTU1-0-U58ltZVV-XlL5YkWt0aALIQHRo5CwjJa=w1200-h1200-k-no" alt="Plato servido en Cartof, foto de Google Maps" loading="lazy"><figcaption>04 <span>Un plato para compartir</span></figcaption></figure>
+        <figure class="gallery-item reveal"><img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9TJOFbYpLzo-ustF6Bok4F5yDMGo_YHGQyUxIFksw0aALhVVLKg0a18IYLyzt6b8Bg5e_jGSWo4jAk9TLLLPiG-FZ1Vld5AhFyv6YTMATl_8AyejezQf8CJ3ZqErs1L_NBulSeHcQHPUJOa=w1200-h1600-k-no" alt="Postre de Cartof presentado sobre piedras, foto de Google Maps" loading="lazy"><figcaption>05 <span>Postre de autor</span></figcaption></figure>
+      </div>
+      <p class="gallery-credit">Cinco imágenes elegidas de la galería de la ficha de Cartof en Google Maps.</p>
+    </section>
+
+    <section class="reservation-section section-pad" id="reservas">
+      <div class="section-kicker light-kicker reveal"><span>04 — RESERVAS</span><span>TE ESPERAMOS EN CARTOF</span></div>
+      <div class="reservation-grid"><div><h2 class="kinetic-title reveal">La mesa<br>está <em>lista.</em></h2><p class="reservation-copy reveal">Contanos cuándo venís y cuántos son. Enviamos tu solicitud directo a nuestro WhatsApp.</p><div class="reservation-meta reveal"><span>MAR — SÁB</span><span>AV. GAUSS 5939 · CÓRDOBA</span></div></div>
+        <form id="reservation-form" class="reservation-form reveal"><label>Tu nombre<input name="name" autocomplete="name" required placeholder="¿Cómo te llamás?"></label><div class="form-row"><label>Personas<select name="people" required><option value="">Elegí cantidad</option><option>1 persona</option><option>2 personas</option><option>3 personas</option><option>4 personas</option><option>5 personas</option><option>6 personas</option><option>7 o más</option></select></label><label>Fecha<input name="date" type="date" required></label></div><div class="form-row"><label>Horario<input name="time" type="time" required></label><label>Email <small>(opcional)</small><input name="email" type="email" autocomplete="email" placeholder="tu@email.com"></label></div><label>Algo que debamos saber <small>(opcional)</small><textarea name="notes" rows="2" placeholder="Preferencias, ocasión especial…"></textarea></label><button class="button button-lime" type="submit">Solicitar reserva <span>↗</span></button><small class="form-hint">Se abrirá WhatsApp con tu mensaje listo para enviar.</small></form></div>
+    </section>
+
+    <section class="visit-section section-pad">
+      <div class="section-kicker reveal"><span>VENÍ A CONOCERNOS</span><span>ARGÜELLO · CÓRDOBA</span></div>
+      <div class="visit-grid"><div><h2 class="kinetic-title reveal">Nos vemos<br>en <em>Cartof.</em></h2><p class="visit-lead reveal">Un espacio para descubrir sabores y compartir buenos momentos.</p><a class="button button-dark reveal" href="https://maps.google.com/?q=Av.+Carlos+F.+Gauss+5939,+C%C3%B3rdoba" target="_blank" rel="noopener">Cómo llegar <span>↗</span></a></div><div class="map-card reveal"><iframe title="Ubicación de Cartof Restaurant" src="https://maps.google.com/maps?q=Av.%20Carlos%20F.%20Gauss%205939%2C%20C%C3%B3rdoba&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><div class="map-label"><span class="map-pin">✳</span><span><b>CARTOF RESTAURANT</b><small>Av. Carlos F. Gauss 5939, Córdoba</small></span></div></div></div>
+    </section>
+  </main>
+
+  <footer class="footer section-pad"><div class="footer-top"><a class="brand footer-brand" href="#top"><span class="brand-mark">C</span><span>CARTOF<small>RESTAURANT · CÓRDOBA</small></span></a><p>Una mesa.<br><em>Mil mundos.</em></p><a class="back-top" href="#top">VOLVER ARRIBA ↑</a></div><div class="footer-info"><div><span>VISITANOS</span><a href="https://maps.google.com/?q=Av.+Carlos+F.+Gauss+5939,+C%C3%B3rdoba" target="_blank" rel="noopener">Av. Carlos F. Gauss 5939<br>X5021FHA Córdoba, Argentina</a></div><div><span>CONTACTO</span><a href="tel:+543518588027">0351 858-8027</a><a href="https://wa.me/543518588027" target="_blank" rel="noopener">WhatsApp ↗</a></div><div><span>SEGUINOS</span><a href="https://es-la.facebook.com/cartofrestaurant/" target="_blank" rel="noopener">Facebook ↗</a><a href="https://www.instagram.com/cartofrestaurant/" target="_blank" rel="noopener">Instagram ↗</a></div><div><span>HORARIOS</span><p>Según la información compartida:<br>abre desde las 20:30 h.<br>Confirmá antes de visitarnos.</p></div></div><div class="footer-bottom"><span>© CARTOF RESTAURANT · CÓRDOBA</span><span>COCINA DE AUTOR, CON IDENTIDAD.</span><span>RANGO INFORMADO $20.000–$70.000 POR PERSONA</span></div></footer>
+
+  <div class="cart-backdrop" hidden></div><aside class="cart-drawer" aria-label="Tu pedido" aria-hidden="true"><div class="cart-head"><div><span class="eyebrow">CARTOF · WHATSAPP</span><h2>Tu pedido</h2></div><button class="cart-close" aria-label="Cerrar carrito">×</button></div><div class="cart-items" id="cart-items"></div><p class="cart-total" id="cart-total"></p><form id="order-form" class="order-form"><label>Tu nombre<input name="name" required placeholder="¿Cómo te llamás?"></label><label>¿Cómo lo disfrutás?<select name="mode" required><option value="">Elegí una opción</option><option value="En el local">En el local</option><option value="Para llevar">Para llevar</option><option value="Delivery">Delivery</option></select></label><label class="table-field" hidden>Mesa<input name="table" placeholder="Número o ubicación de mesa"></label><label>Indicaciones <small>(opcional)</small><textarea name="notes" rows="2" placeholder="Dirección para delivery, preferencias…"></textarea></label><button class="button button-lime" type="submit">Continuar por WhatsApp <span>↗</span></button><small class="form-hint">El restaurante confirma disponibilidad y precios por WhatsApp.</small></form></aside>
+  <dialog class="admin-dialog" id="admin-dialog"><div class="admin-head"><div><span class="eyebrow">CARTOF · ADMINISTRACIÓN</span><h2>Editar precios</h2></div><button class="admin-close" type="button" aria-label="Cerrar">×</button></div><form id="admin-login" class="admin-login"><p>Ingresá la clave para editar los precios del catálogo.</p><label>Clave<input name="password" type="password" inputmode="numeric" autocomplete="current-password" required placeholder="Clave de administración"></label><button class="button button-lime" type="submit">Ingresar <span>↗</span></button><small class="admin-error" aria-live="polite"></small></form><div id="admin-editor" class="admin-editor" hidden><div class="admin-toolbar"><p>Dejá vacío para mantener el precio original de la captura. Los cambios se guardan en este navegador.</p><input type="search" id="admin-search" placeholder="Filtrar productos…"></div><div id="admin-rows" class="admin-rows"></div><button id="save-prices" class="button button-lime" type="button">Guardar precios <span>✓</span></button><small id="save-status" class="form-hint" aria-live="polite"></small></div></dialog>
+  <a class="floating-whatsapp" href="https://wa.me/543518588027" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">✳</a>
+</body>
+</html>
+
+

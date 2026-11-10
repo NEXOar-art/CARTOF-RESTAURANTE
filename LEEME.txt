@@ -1,0 +1,14 @@
+CARTOF LANDING — ARCHIVOS
+
+Abrí index.html en un navegador moderno.
+
+Incluye:
+- index.html
+- styles.css
+- app.js
+- catalog.js
+- vendor/three.min.js (Three.js 0.152.2)
+
+La animación de Three.js se carga desde el archivo local incluido.
+Las fotos de Google Maps, el mapa, las fuentes y los enlaces/formularios de WhatsApp requieren conexión a Internet.
+Los precios que edite Administración se guardan en el almacenamiento local de ese navegador.
